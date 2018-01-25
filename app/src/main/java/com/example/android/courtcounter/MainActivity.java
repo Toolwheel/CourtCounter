@@ -27,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Resets the score for both teams to 0.
+     **/
+
+    public void resetScore(View view) {
+        displayForTeamA(0);
+        displayForTeamB(0);
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+    }
+
+    /**
      * This method  is called when the Button +3 is clicked.
      */
     public void submitCourt3ForTeamA(View view) {
@@ -70,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
      * This method  is called when the Button +2 is clicked.
      */
     public void submitCourt2ForTeamB(View view) {
-        scoreTeamB = scoreTeamA + 2;
+        scoreTeamB = scoreTeamB + 2;
         displayForTeamB(scoreTeamB);
     }
 
